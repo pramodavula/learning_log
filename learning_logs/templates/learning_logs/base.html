@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name=""viewport" content="width=device-width", initial-scale="1">
+  <meta name="viewport" content="width=device-width", initial-scale="1">
   <title>Learning Log</title>
 
   {% load django_bootstrap5 %}
@@ -59,7 +59,14 @@
     </div><!-- Closes navbar's container-->
   </nav><!-- End of navbar -->
 
-{% block content %} {% endblock content %}
+  <main class="container">
+      <div class="pb-2 mb-2 border-bottom">
+        {% block page_header %} {% endblock page_header %}
+      </div>
+      <div>
+        {% block content %} {% endblock content %}
+      </div>
+  </main>
 
 </body>
 </html>
