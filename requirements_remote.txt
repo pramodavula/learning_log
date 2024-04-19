@@ -1,0 +1,3 @@
+# Requirements for love live project
+gunicorn
+pysycopg2
