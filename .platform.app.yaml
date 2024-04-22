@@ -13,10 +13,10 @@ web:
     locations:
         "/":
             passthru: true
-        #"/static":
-            #root:"static"
-            #expires: 1h
-            #allow: true
+        "/static":
+            root:"static"
+            expires: 1h
+            allow: true
 
 # The size of the persistent disk of the application(in MB).
 disk: 512
@@ -32,7 +32,7 @@ hooks:
     build: |
         pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -r requirements_remote.txr
+        pip install -r requirements_remote.txt
 
         mkdir logs
         python manage.py collectstatistic
